@@ -145,9 +145,16 @@ h1 {
 
     .cake {
         width: 20vw;
+        margin-top: 5px;
     }
     .container{
         margin-top: 15%;
         padding-top: 5%;
+    }
+    body{
+        height: 100%;
+    }
+    .cake-container{
+        margin-top: 1%;
     }
 }
