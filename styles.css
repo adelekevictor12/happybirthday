@@ -138,8 +138,8 @@ h1 {
     }
 
     .photo {
-        width: 50vw;
-        height: 50vw;
+        width: 60vw; /* Increase width for smaller screens */
+        height: 60vw; /* Increase height for smaller screens */
     }
 
     .cake {
