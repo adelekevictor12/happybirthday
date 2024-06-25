@@ -138,11 +138,16 @@ h1 {
     }
 
     .photo {
-        width: 60vw; /* Increase width for smaller screens */
-        height: 60vw; /* Increase height for smaller screens */
+        width: 30vw; /* Increase width for smaller screens */
+        height: 30vw; /* Increase height for smaller screens */
+        margin-top: 5%;
     }
 
     .cake {
-        width: 40vw;
+        width: 20vw;
+    }
+    .container{
+        margin-top: 15%;
+        padding-top: 5%;
     }
 }
