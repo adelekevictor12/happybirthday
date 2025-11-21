@@ -3,26 +3,32 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, rgb(255, 252, 95), #feb47b);
-    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container {
     text-align: center;
-    color: white;
+    color: #f4e4bc;
     padding: 20px;
     box-sizing: border-box;
+    max-width: 1200px;
+    width: 100%;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -64,11 +70,9 @@ h1 {
 .balloon {
     position: absolute;
     bottom: -100px;
-    width: 30px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50% 50% 50% 50%;
-    animation: floatUp 5s ease-in-out infinite;
+    width: 50px;
+    height: auto;
+    animation: floatUp 8s ease-in-out infinite;
 }
 
 .balloon:nth-child(2) {
@@ -92,8 +96,9 @@ h1 {
 }
 
 @keyframes floatUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-1000px); }
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50vh) rotate(10deg); }
+    100% { transform: translateY(-120vh) rotate(-10deg); }
 }
 
 .cake-container {
@@ -119,7 +124,7 @@ h1 {
 /* Responsive Design */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .photo {
@@ -130,31 +135,37 @@ h1 {
     .cake {
         width: 30vw;
     }
+
+    .animation-container {
+        height: 15vh;
+    }
 }
 
 @media (max-width: 400px) {
     h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
+        margin-bottom: 15px;
     }
 
     .photo {
-        width: 30vw; /* Increase width for smaller screens */
-        height: 30vw; /* Increase height for smaller screens */
-        margin-top: 5%;
+        width: 42vw;
+        height: 42vw;
+        margin: 5px;
     }
 
     .cake {
-        width: 20vw;
-        margin-top: 5px;
+        width: 35vw;
+        margin: 5px;
     }
     .container{
-        margin-top: 10%;
-        padding-top: 5%;
+        padding-top: 20px;
     }
     body{
-        height: 100%;
+        justify-content: flex-start;
+        padding-top: 20px;
     }
     .cake-container{
-        margin-top: 1%;
+        margin-top: 10px;
+        padding-bottom: 30px;
     }
 }
